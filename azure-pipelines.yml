@@ -7,11 +7,11 @@ trigger:
 - developer
 
 pr:
-  autoCancel:false
+  #autoCancel:false
   branches:
       include:
         - developer
-  drafts:false
+  #drafts:false
 
 pool:
   vmImage: 'ubuntu-latest'
