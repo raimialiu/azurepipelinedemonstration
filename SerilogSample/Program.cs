@@ -22,6 +22,7 @@ namespace SerilogSample
             Log.Logger = new LoggerConfiguration()
                             .Enrich.FromLogContext()
                             .Enrich.With(new Enricher())
+                            .Enrich.With(new TimeStamp())
                             .WriteTo.File(new CompactJsonFormatter(), dir)
                             .WriteTo.Seq("http://localhost:5341")
                             .CreateLogger();
